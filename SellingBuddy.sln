@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Base", "src\Buildi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Factory", "src\BuildingBlocks\EventBus\EventBus.Factory\EventBus.Factory.csproj", "{7D7C0703-B74C-4308-8FFB-566E78EDFA4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.AzureServiceBus", "src\BuildingBlocks\EventBus\EventBus.AzureServiceBus\EventBus.AzureServiceBus.csproj", "{3B48D927-71FF-4FCC-96A2-825F83DA69B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{7D7C0703-B74C-4308-8FFB-566E78EDFA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D7C0703-B74C-4308-8FFB-566E78EDFA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D7C0703-B74C-4308-8FFB-566E78EDFA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B48D927-71FF-4FCC-96A2-825F83DA69B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B48D927-71FF-4FCC-96A2-825F83DA69B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B48D927-71FF-4FCC-96A2-825F83DA69B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B48D927-71FF-4FCC-96A2-825F83DA69B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{0BE076CD-5872-4E9F-8BAE-29FD719F164E} = {09770DC4-DFFE-41F0-8169-3D86056664D3}
 		{F781E268-8736-4276-BCAD-FA19A6934707} = {0BE076CD-5872-4E9F-8BAE-29FD719F164E}
 		{7D7C0703-B74C-4308-8FFB-566E78EDFA4F} = {0BE076CD-5872-4E9F-8BAE-29FD719F164E}
+		{3B48D927-71FF-4FCC-96A2-825F83DA69B6} = {0BE076CD-5872-4E9F-8BAE-29FD719F164E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5C47527-553D-4CAC-BE45-3B84447F222D}

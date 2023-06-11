@@ -18,7 +18,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{95
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{21E3058B-C354-4877-A547-0E612176C115}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApiGateway", "WebApiGateway", "{57B95732-BD1C-4854-9610-793F81AD9119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.ApiGateway", "src\ApiGateways\WebApiGateway\Web.ApiGateway\Web.ApiGateway.csproj", "{23863DED-447C-41C9-8E46-B2667A83A329}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23863DED-447C-41C9-8E46-B2667A83A329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23863DED-447C-41C9-8E46-B2667A83A329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23863DED-447C-41C9-8E46-B2667A83A329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23863DED-447C-41C9-8E46-B2667A83A329}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -27,6 +41,8 @@ Global
 		{09770DC4-DFFE-41F0-8169-3D86056664D3} = {3B8A5635-6861-4F5A-A3D5-3BE0FE6F3D74}
 		{95A7EB74-2A23-4819-8ADC-7169767A973E} = {3B8A5635-6861-4F5A-A3D5-3BE0FE6F3D74}
 		{21E3058B-C354-4877-A547-0E612176C115} = {3B8A5635-6861-4F5A-A3D5-3BE0FE6F3D74}
+		{57B95732-BD1C-4854-9610-793F81AD9119} = {D0F44124-FAAF-4A13-9EDA-E89EA9799BAB}
+		{23863DED-447C-41C9-8E46-B2667A83A329} = {57B95732-BD1C-4854-9610-793F81AD9119}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5C47527-553D-4CAC-BE45-3B84447F222D}

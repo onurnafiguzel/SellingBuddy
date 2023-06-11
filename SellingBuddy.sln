@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApiGateway", "WebApiGate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.ApiGateway", "src\ApiGateways\WebApiGateway\Web.ApiGateway\Web.ApiGateway.csproj", "{23863DED-447C-41C9-8E46-B2667A83A329}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{0BE076CD-5872-4E9F-8BAE-29FD719F164E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Base", "src\BuildingBlocks\EventBus\EventBus.Base\EventBus.Base.csproj", "{F781E268-8736-4276-BCAD-FA19A6934707}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,10 @@ Global
 		{23863DED-447C-41C9-8E46-B2667A83A329}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23863DED-447C-41C9-8E46-B2667A83A329}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23863DED-447C-41C9-8E46-B2667A83A329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F781E268-8736-4276-BCAD-FA19A6934707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F781E268-8736-4276-BCAD-FA19A6934707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F781E268-8736-4276-BCAD-FA19A6934707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F781E268-8736-4276-BCAD-FA19A6934707}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +51,8 @@ Global
 		{21E3058B-C354-4877-A547-0E612176C115} = {3B8A5635-6861-4F5A-A3D5-3BE0FE6F3D74}
 		{57B95732-BD1C-4854-9610-793F81AD9119} = {D0F44124-FAAF-4A13-9EDA-E89EA9799BAB}
 		{23863DED-447C-41C9-8E46-B2667A83A329} = {57B95732-BD1C-4854-9610-793F81AD9119}
+		{0BE076CD-5872-4E9F-8BAE-29FD719F164E} = {09770DC4-DFFE-41F0-8169-3D86056664D3}
+		{F781E268-8736-4276-BCAD-FA19A6934707} = {0BE076CD-5872-4E9F-8BAE-29FD719F164E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5C47527-553D-4CAC-BE45-3B84447F222D}

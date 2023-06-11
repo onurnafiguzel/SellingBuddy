@@ -36,6 +36,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorWebApp", "BlazorWebAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "src\Clients\BlazorWebApp\WebApp\WebApp.csproj", "{964C0B75-B34E-4DD1-8D08-0016629BCAA6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketService", "BasketService", "{2F585C63-8B64-4833-A0ED-6CAC9B325D29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Api", "src\Services\BasketService\BasketService.Api\BasketService.Api.csproj", "{4720B7C3-61BE-4176-AEAB-5FD37B445499}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +70,10 @@ Global
 		{964C0B75-B34E-4DD1-8D08-0016629BCAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{964C0B75-B34E-4DD1-8D08-0016629BCAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{964C0B75-B34E-4DD1-8D08-0016629BCAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4720B7C3-61BE-4176-AEAB-5FD37B445499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4720B7C3-61BE-4176-AEAB-5FD37B445499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4720B7C3-61BE-4176-AEAB-5FD37B445499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4720B7C3-61BE-4176-AEAB-5FD37B445499}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +92,8 @@ Global
 		{15007F96-78E1-47D6-8A0F-635A93295132} = {0BE076CD-5872-4E9F-8BAE-29FD719F164E}
 		{698F4BCA-9FB1-4959-9709-490DEA02480A} = {21E3058B-C354-4877-A547-0E612176C115}
 		{964C0B75-B34E-4DD1-8D08-0016629BCAA6} = {698F4BCA-9FB1-4959-9709-490DEA02480A}
+		{2F585C63-8B64-4833-A0ED-6CAC9B325D29} = {95A7EB74-2A23-4819-8ADC-7169767A973E}
+		{4720B7C3-61BE-4176-AEAB-5FD37B445499} = {2F585C63-8B64-4833-A0ED-6CAC9B325D29}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5C47527-553D-4CAC-BE45-3B84447F222D}

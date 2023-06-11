@@ -48,6 +48,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "Identity
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService.Api", "src\Services\IdentityService\IdentityService.Api\IdentityService.Api.csproj", "{03E6AB9F-17EF-4D23-B7F2-FD865ED047FF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationService", "NotificationService", "{AD982392-5AFB-4E7F-86A9-B873E1913D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "src\Services\NotificationService\NotificationService\NotificationService.csproj", "{FD61BABE-E59F-4BAE-83B6-75C003C0B6CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +94,10 @@ Global
 		{03E6AB9F-17EF-4D23-B7F2-FD865ED047FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03E6AB9F-17EF-4D23-B7F2-FD865ED047FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03E6AB9F-17EF-4D23-B7F2-FD865ED047FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD61BABE-E59F-4BAE-83B6-75C003C0B6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD61BABE-E59F-4BAE-83B6-75C003C0B6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD61BABE-E59F-4BAE-83B6-75C003C0B6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD61BABE-E59F-4BAE-83B6-75C003C0B6CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +122,8 @@ Global
 		{4F36974E-9BCC-4AB9-99FB-B52B5571E296} = {C5A52D70-309A-437D-B1C9-3028F2043D4B}
 		{6B50FCB6-AF3C-4D64-87AD-259C6D0678CB} = {95A7EB74-2A23-4819-8ADC-7169767A973E}
 		{03E6AB9F-17EF-4D23-B7F2-FD865ED047FF} = {6B50FCB6-AF3C-4D64-87AD-259C6D0678CB}
+		{AD982392-5AFB-4E7F-86A9-B873E1913D58} = {95A7EB74-2A23-4819-8ADC-7169767A973E}
+		{FD61BABE-E59F-4BAE-83B6-75C003C0B6CA} = {AD982392-5AFB-4E7F-86A9-B873E1913D58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5C47527-553D-4CAC-BE45-3B84447F222D}

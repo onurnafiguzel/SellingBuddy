@@ -10,7 +10,7 @@ namespace EventBus.Base.Abstraction
         event EventHandler<string> OnEventRemoved;
         void AddSubscription<T, TH>() where T : IntegrationEvent where TH : IIntegrationEventHandler<T>;
         void RemoveSubscription<T, TH>() where TH : IIntegrationEventHandler<T> where T : IntegrationEvent;
-        bool HasSubscriptionSForEvent<T>() where T : IntegrationEvent;
+        bool HasSubscriptionsForEvent<T>() where T : IntegrationEvent;
         bool HasSubscriptionsForEvent(string eventName);
         Type GetEventTypeByName(string eventName);
         void Clear();

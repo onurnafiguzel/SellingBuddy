@@ -18,11 +18,11 @@ namespace EventBus.AzureServiceBus
         public EventBusServiceBus(EventBusConfig config, IServiceProvider serviceProvider) : base(config, serviceProvider)
         {
             managementClient = new ManagementClient(config.EventBusConnectionString);
-            topicClient = createTopicClient();
+            topicClient = CreateTopicClient();
             logger = serviceProvider.GetService(typeof(ILogger<EventBusServiceBus>)) as ILogger<EventBusServiceBus>;
         }
 
-        private ITopicClient createTopicClient()
+        private ITopicClient CreateTopicClient()
         {
             if (topicClient == null || topicClient.IsClosedOrClosing)
                 topicClient = new TopicClient(EventBusConfig.EventBusConnectionString, EventBusConfig.DefaultTopicName, RetryPolicy.Default);

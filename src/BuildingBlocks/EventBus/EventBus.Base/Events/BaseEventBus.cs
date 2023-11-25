@@ -13,7 +13,7 @@ namespace EventBus.Base.Events
         public readonly IServiceProvider ServiceProvider;
         public readonly IEventBusSubscriptionManager SubsManager;
 
-        public EventBusConfig EventBusConfig { get; set; }
+        public EventBusConfig EventBusConfig { get; private set; }
        
         public BaseEventBus(EventBusConfig config, IServiceProvider serviceProvider)
         {

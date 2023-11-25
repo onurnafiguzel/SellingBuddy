@@ -1,16 +1,15 @@
+using EventBus.Base.Abstraction;
+using EventBus.Base;
+using EventBus.Factory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using PaymentService.Api.IntegrationEvent.EventHandlers;
+using PaymentService.Api.IntegrationEvents.Events;
 
 namespace PaymentService.Api
 {
@@ -31,6 +30,26 @@ namespace PaymentService.Api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PaymentService.Api", Version = "v1" });
+            });
+
+            services.AddLogging(configure =>
+            {
+                configure.AddConsole();
+                configure.AddDebug();
+            });
+
+            services.AddTransient<OrderStartedIntegrationEventHandler>();
+
+            services.AddSingleton<IEventBus>(sp =>
+            {
+                EventBusConfig config = new()
+                {
+                    ConnectionRetryCount = 5,
+                    EventNameSuffix = "IntegrationEvent",
+                    SubscriberClientAppName = "PaymentService",
+                    EventBusType = EventBusType.RabbitMQ
+                };
+                return EventBusFactory.Create(config, sp);
             });
         }
 
@@ -54,6 +73,9 @@ namespace PaymentService.Api
             {
                 endpoints.MapControllers();
             });
+
+            IEventBus eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<OrderStartedIntegrationEvent, OrderStartedIntegrationEventHandler>();
         }
     }
-}
+} 

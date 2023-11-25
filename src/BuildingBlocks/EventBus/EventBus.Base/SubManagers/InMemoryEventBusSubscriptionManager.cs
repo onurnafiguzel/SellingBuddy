@@ -28,7 +28,8 @@ namespace EventBus.Base.SubManagers
         {
             var eventName = GetEventKey<T>();
             AddSubscription(typeof(TH), eventName);
-            if (_eventTypes.Contains(typeof(T)))
+
+            if (!_eventTypes.Contains(typeof(T)))
             {
                 _eventTypes.Add(typeof(T));
             }
@@ -42,12 +43,12 @@ namespace EventBus.Base.SubManagers
             }
             if (_handlers[eventName].Any(s => s.HandlerType == handlerType))
             {
-                throw new ArgumentException($"Handler type {handlerType.Name} already registered for '{eventName}'", nameof(handlerType));
+                throw new ArgumentException($"Handler Type {handlerType.Name} already registered for '{eventName}'", nameof(handlerType));
             }
             _handlers[eventName].Add(SubscriptionInfo.Typed(handlerType));
         }
 
-        public void RemoveSubscription<T, TH>() where T : IntegrationEvent where TH : IIntegrationEventHandler<T>
+        public void RemoveSubscription<T, TH>() where TH : IIntegrationEventHandler<T> where T : IntegrationEvent
         {
             var handlerToRemove = FindSubscriptionToRemove<T, TH>();
             var eventName = GetEventKey<T>();
@@ -78,7 +79,7 @@ namespace EventBus.Base.SubManagers
         }
 
         public Type GetEventTypeByName(string eventName) => _eventTypes.SingleOrDefault(t => t.Name == eventName);
-
+      
         public IEnumerable<SubscriptionInfo> GetHandlersForEvent<T>() where T : IntegrationEvent
         {
             var key = GetEventKey<T>();
@@ -91,10 +92,11 @@ namespace EventBus.Base.SubManagers
             var handler = OnEventRemoved;
             handler?.Invoke(this, eventName);
         }
-        private SubscriptionInfo FindSubscriptionToRemove<T, Th>() where T : IntegrationEvent where Th : IIntegrationEventHandler<T>
+
+        private SubscriptionInfo FindSubscriptionToRemove<T, TH>() where T : IntegrationEvent where TH : IIntegrationEventHandler<T>
         {
             var eventName = GetEventKey<T>();
-            return FindSubscriptionToRemove(eventName, typeof(Th));
+            return FindSubscriptionToRemove(eventName, typeof(TH));
         }
 
         private SubscriptionInfo FindSubscriptionToRemove(string eventName, Type handlerType)
@@ -112,6 +114,6 @@ namespace EventBus.Base.SubManagers
             return HasSubscriptionsForEvent(key);
         }
 
-        public bool HasSubscriptionsForEvent(string eventName) => _handlers.ContainsKey(eventName);
+        public bool HasSubscriptionsForEvent(string eventName) => _handlers.ContainsKey(eventName);     
     }
 }

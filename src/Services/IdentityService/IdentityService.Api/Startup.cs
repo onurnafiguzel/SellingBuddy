@@ -1,4 +1,5 @@
 using IdentityService.Api.Application.Services;
+using IdentityService.Api.Extensions.Registration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,21 +24,22 @@ namespace IdentityService.Api
             services.AddScoped<IIdentityService, IdentityService.Api.Application.Services.IdentityService>();
 
             services.AddControllers();
-
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PaymentService.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "IdentityService.Api", Version = "v1" });
             });
+
+            services.ConfigureConsul(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime lifeTime)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PaymentService.Api v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IdentityService.Api v1"));
             }
 
             app.UseHttpsRedirection();
@@ -50,6 +52,9 @@ namespace IdentityService.Api
             {
                 endpoints.MapControllers();
             });
+
+            app.RegisterWithConsul(lifeTime);
+
         }
     }
 }

@@ -21,7 +21,7 @@ namespace BasketService.Api.IntegrationEvents.EventHandlers
         {
             _logger.LogInformation("----- Handling integration event: {IntegrationEventId} at BasketService.Api - ({@IntegrationEvent})", @event.Id, @event);
 
-            await _repository.DeleteBasketAsync(@event.UserId.ToString());
+            await _repository.DeleteBasketAsync(@event.UserId);
         }
     }
 }

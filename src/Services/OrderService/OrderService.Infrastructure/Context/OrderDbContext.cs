@@ -5,8 +5,6 @@ using OrderService.Domain.AggregateModels.OrderAggregate;
 using OrderService.Domain.SeedWork;
 using OrderService.Infrastructure.EntityConfigurations;
 using OrderService.Infrastructure.Extensions;
-using OrderService.Persistence.EntityConfigurations;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 

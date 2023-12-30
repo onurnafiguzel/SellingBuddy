@@ -24,6 +24,8 @@ namespace OrderService.Api
 
                 dbContextSeeder.SeedAsync(context, logger).Wait();
             });
+
+            host.Run();
         }
 
         static IWebHost BuildWebHost(IConfiguration configuration, string[] args) =>

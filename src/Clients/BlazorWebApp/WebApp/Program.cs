@@ -22,7 +22,8 @@ namespace WebApp
 
             builder.Services.AddBlazoredLocalStorage();
 
-            builder.Services.AddTransient<IIdentityService, IdentityService>();                
+            builder.Services.AddTransient<IIdentityService, IdentityService>();
+            builder.Services.AddTransient<ICatalogService, CatalogService>();
 
             builder.Services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
 
